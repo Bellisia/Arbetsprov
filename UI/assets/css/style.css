@@ -42,7 +42,7 @@
 /* Search Wrapper around the search input field */
 #search-wrapper {
   background: rgba(255, 255, 255, 0.65);
-  background-image: url('../UI/assets/search.svg');
+  background-image: url('../search.svg');
   background-repeat: no-repeat;
   background-position: 20px center;
   height: 60px;
@@ -61,14 +61,17 @@
   width: 100%;
   padding-left: 50px;
 }
-#search-wrapper input::-webkit-input-placeholder,
-#search-wrapper input::-moz-input-placeholder,
-#search-wrapper input::-ms-input-placeholder,
-#search-wrapper input::input-placeholder {
-  color: #ffffff;
-}
 #search-wrapper input:focus {
   outline: none;
+}
+#search-wrapper input::-webkit-input-placeholder {
+  color: #fff !important;
+}
+#search-wrapper input::-moz-input-placeholder {
+  color: #fff !important;
+}
+#search-wrapper input::-ms-input-placeholder {
+  color: #fff !important;
 }
 /* Search Choice - the result after pressing one of the search results */
 #search-choice ul {
@@ -105,6 +108,11 @@
 #search-results ul li span.pet {
   display: block;
   padding: 15px 20px;
+}
+#search-results ul li span.search-date {
+  float: right;
+  margin-right: 50px;
+  font-size: 13px;
 }
 #search-results ul li span.search-remove {
   content: '';

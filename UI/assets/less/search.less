@@ -21,12 +21,11 @@
     width: 100%;
     padding-left: 50px;
 
-    &::-webkit-input-placeholder,
-    &::-moz-input-placeholder,
-    &::-ms-input-placeholder,
-    &::input-placeholder { color: @color-font; }
-
     &:focus { outline: none; }
+
+    &::-webkit-input-placeholder { color: #fff !important; }
+    &::-moz-input-placeholder { color: #fff !important; }
+    &::-ms-input-placeholder { color: #fff !important; }
   }
 }
 
@@ -66,6 +65,12 @@
       span.pet {
         display: block;
         padding: 15px 20px;
+      }
+
+      span.search-date {
+        float: right;
+        margin-right: 50px;
+        font-size: 13px;
       }
 
       span.search-remove {

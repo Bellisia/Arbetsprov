@@ -28,9 +28,18 @@
           // The name of the pets is turned into lower case so it's easier to match with the input value
           var result = petData.pets[i].name.toLowerCase();
 
+          // Adding todays date to search
+          var searchDate = new Date();
+          var searchYear = searchDate.getFullYear();
+          var searchMonth = searchDate.getMonth();
+          var searchDay = searchDate.getDate();
+          var searchTime = searchYear + "-" + (searchMonth<10 ? '0' : '') + searchMonth +  "-" + (searchDay<10 ? '0' : '') + searchDay + " " + searchDate.getHours() + ":" + searchDate.getMinutes();
+
           // If the pet names contains the value entered in the input field, append all of the matching pet name to the result div
           if (result.indexOf(value) > -1) {
-            $("#search-results ul").append("<li><span class='pet'>" + petData.pets[i].name + "</span><span class='search-remove'><i class='fa fa-remove'></i></span></li>");
+            $("#search-results ul").append("<li><span class='pet'>" + petData.pets[i].name +
+            "<span class='search-date'>" + searchTime +
+            "</span></span><span class='search-remove'><i class='fa fa-remove'></i></span></li>");
           }
         }
 
