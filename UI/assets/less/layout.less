@@ -1,0 +1,21 @@
+/* Content Wrapper */
+.content-wrapper {
+  margin: 0 auto;
+
+  /* Header */
+  header {
+    text-align: center;
+    padding: 50px 0 20px 0;
+  }
+
+  /* Main content */
+  main {
+    width: 94%;
+    margin: 0 auto;
+  }
+
+  /* Content sizes on different devices */
+  @media screen and (max-width: @size-tablet) { width: 100%; }
+  @media screen and (min-width: @size-tablet) and (max-width: @size-desktop) { width: @size-tablet; }
+  @media screen and (min-width: @size-desktop) { width: 820px; }
+}

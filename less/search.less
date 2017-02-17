@@ -1,0 +1,103 @@
+/* Search Wrapper around the search input field */
+#search-wrapper {
+  .background(0.65);
+  background-image: @icon-search;
+  background-repeat: no-repeat;
+  background-position: 20px center;
+  height: 60px;
+  margin: 0 auto;
+
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+
+  input {
+    background: transparent;
+    border: none;
+    height: 60px;
+    font-size: 18px;
+    color: @color-font;
+    width: 100%;
+    padding-left: 50px;
+
+    &:focus { outline: none; }
+  }
+}
+
+/* Search Choice - the result after pressing one of the search results */
+#search-choice {
+  ul {
+    .background(0.4);
+    color: @color-font;
+    margin: 0;
+    padding: 0;
+
+    li {
+      padding: 5px 20px;
+      list-style: none;
+      text-transform: capitalize;
+
+      &:first-child { padding-top: 15px; }
+      &:last-child { padding-bottom: 15px; }
+    }
+  }
+}
+
+/* Search Results - The list of pets benieth the search form */
+#search-results {
+  .background(0.4);
+  margin-top: 20px;
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      position: relative;
+      color: @color-font;
+      list-style: none;
+
+      span.pet {
+        display: block;
+        padding: 15px 20px;
+      }
+
+      span.search-remove {
+        content: '';
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: #db8937;
+        width: 50px;
+        height: 100%;
+        opacity: 0.6;
+        i {
+          display: block;
+          position: absolute;
+          right: 17px;
+          top: 16px;
+          background: #fff;
+          border-radius: 10px;
+          padding: 2px 3px;
+          font-size: 12px;
+          color: #bd856b;
+        }
+      }
+
+      &:hover {
+        .background(0.5);
+        cursor: pointer;
+
+        span.search-remove {
+          display: block;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
